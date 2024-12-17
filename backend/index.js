@@ -1,24 +1,17 @@
 
 const express = require("express");
-const mainRouter = require("./routes/index")
+const cors = require('cors');
+const mainRouter = require("./routes/index");
 
 const app = express();
+
+app.use(cors());
+app.use(express.json());
+module.exports = router;
 
 // the API calls will go through the main router 
 
 app.use("/api/v1", mainRouter);
 
+app.listen(3000);
 
-function main (){
-    fetch("https//sum-server.100xdevs.com/todos")
-    .then (async (response) => {
-        const json = await response.json();
-        console.log(json);
-    })
-}
-
-async function main (){
-    const response = await fetch("https//sum-server.100xdevs.com/todos");
-    const json = await response.json();
-    console.log(json);
-}
