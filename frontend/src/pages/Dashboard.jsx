@@ -6,7 +6,7 @@ import { Users } from "../components/User"
 export const Dashboard = () => {
     return <div className="py-20">
         <Appbar />
-        <Balance value={10000}/>
+        <Balance value={"10,000"}/>
         <Users />
     </div>
 }

@@ -16,7 +16,7 @@ export const Users = () => {
             Users
         </div>
         <div className="my-2 pl-4">
-            <input typeof="text" placeholder="Search Users....."></input>
+            <input typeof="text" placeholder="Search Users....." className="w-full px-2 py-1 border rounded-md border-slate-200 text-sm"></input>
         </div>
         <div>
             {users.map(user => <User user = {user} />)}
@@ -34,7 +34,7 @@ function User({user}) {
                     {user.firstName[0]}
                 </div>
             </div> 
-            <div className="flex flex-col justify-center h-full">
+            <div className="flex flex-col justify-center h-full p-3">
                 <div>
                     {user.firstName} {user.lastName}
                 </div>
